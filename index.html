@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Система Управления Абитуриентами</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Приемная комиссия</h1>
+
+      <div class="statistics">
+        <h2>Статистика</h2>
+        <div class="stats-block">
+          <p>Всего абитуриентов: <span id="total-applicants">0</span></p>
+        </div>
+      </div>
+
+      <div class="registration-form">
+        <h2>Регистрация абитуриента</h2>
+        <form id="applicant-form">
+          <input type="text" id="fullname" placeholder="ФИО" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="tel" id="phone" placeholder="Телефон" required />
+
+          <select id="faculty" required>
+            <option value="">Выберите факультет</option>
+            <option value="IT">Информационных технологий</option>
+            <option value="ECONOMICS">Экономический</option>
+            <option value="MEDICINE">Медицинский</option>
+            <option value="HUMANITIES">Гуманитарный</option>
+          </select>
+
+          <button type="submit">Зарегистрировать</button>
+        </form>
+      </div>
+
+      <div class="filters">
+        <h2>Фильтры</h2>
+        <select id="faculty-filter">
+          <option value="">Все факультеты</option>
+          <option value="IT">Информационных технологий</option>
+          <option value="ECONOMICS">Экономический</option>
+          <option value="MEDICINE">Медицинский</option>
+          <option value="HUMANITIES">Гуманитарный</option>
+        </select>
+        <input type="text" id="search-input" placeholder="Поиск по ФИО" />
+      </div>
+
+      <div class="applicants-list">
+        <h2>Список абитуриентов</h2>
+        <div id="applicants-container"></div>
+      </div>
+    </div>
+
+    <script type="module" src="app/main.js"></script>
+  </body>
+</html>
